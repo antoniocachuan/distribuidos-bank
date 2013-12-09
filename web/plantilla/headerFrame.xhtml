@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Proyecto de Sistemas Distribuidos</title>
+        <link rel="shortcut icon" href="img/favicon/favicon.png" />
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <h:outputStylesheet library="css" name="font-awesome.css"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-responsive.css"/>
+        <h:outputStylesheet library="css" name="estilos.css"/>
+    </h:head>
+    <h:body> 
+        <div>
+            <h:form>
+                <p:menubar>  
+                    <p:submenu label="Cuentas" icon="ui-icon-document">  
+                        <p:menuitem value="Apertura" onclick="PF('dlg1').show();" />  
+                        <p:menuitem value="Deposito" onclick="PF('dlg2').show();" />  
+                        <p:menuitem value="Retiro" url="#" />  
+                        <p:menuitem value="Transferencia" url="#" />  
+                    </p:submenu>  
+
+                    <p:submenu label="Tablas" icon="ui-icon-pencil">  
+                        <p:menuitem value="Clientes" url="#" icon="ui-icon-arrowreturnthick-1-w" />  
+                        <p:menuitem value="Sucursales" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
+                        <p:menuitem value="Ubicaciones" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
+                    </p:submenu>  
+
+                    <p:submenu label="Consultas" icon="ui-icon-help">  
+                        <p:menuitem value="Cuenta" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
+                        <p:menuitem value="Movimientos" onclick="PF('dlg3').show();" icon="ui-icon-arrowreturnthick-1-e" />  
+                        <p:menuitem value="Movimientos V2" url="faces/consultarMovimientos2.xhtml" icon="ui-icon-arrowreturnthick-1-e" />  
+                        <p:menuitem value="Ingresos" url="#" icon="ui-icon-arrowreturnthick-1-e" />  
+                    </p:submenu>  
+
+                    <p:menuitem value="Salir" 
+                                action="#{inicioController.salir()}" 
+                                icon="ui-icon-close" 
+                                ajax="false"/>  
+                </p:menubar> 
+            </h:form>
+        </div>
+    </h:body>
+</html>

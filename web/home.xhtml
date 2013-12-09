@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Proyecto de Sistemas Distribuidos</title>
+        <meta name="viewport" content="width=device-width"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css' />    
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <h:outputStylesheet library="css" name="font-awesome.css"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="css" name="bootstrap-responsive.css"/>
+        <h:outputStylesheet library="css" name="estilos.css"/>
+        <link rel="shortcut icon" href="img/favicon/favicon.png" />
+
+    </h:head>
+    <h:body>
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="span5">
+                    </div>
+                    <div class="span5 offset2">
+                        <div class="links">
+                            <p>Grupo N° 9 | <a href="#">E.A.P. Ingeniería de Sistemas</a> | <a href="#integrantes">Integrantes</a> |</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="logo">
+                            <h1><a href="#">Banco AbC</a></h1>
+                            <p class="lmeta">Los mejores préstamos del mercado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                    <span>Menu</span>
+                                </a>
+                                <div class="nav-collapse collapse">
+                                    <ul class="nav">
+                                        <li><a href="home.xhtml">Inicio</a></li>
+                                        <li><a href="service.html">Productos</a></li>
+                                        <li><a href="aboutus.html">Servicios</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Comunicado <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="blog.html">Gratificaciones</a></li>
+                                                <li><a href="blog-single.html">Feriados</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Ayuda</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="border"></div>
+                        <div class="hero">
+                            <div class="row">
+                                <div class="span9">
+                                    <div class="htitle">
+                                        <h2>Iniciar Sesión</h2>
+                                        <h3>Solo usuarios registrados</h3>
+                                    </div>
+                                </div>
+                                <div class="span3">
+                                    <div class="lregister button">
+                                        ¿Tienes una cuenta? <a data-toggle="modal" class="btn" href="#loginModal">Empezar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border"></div>
+                        <div class="matter register">
+                            <div class="row">
+                                <div class="span7">
+                                    <h2 class="color">Bienvenido</h2>
+                                    <h3>Conócenos</h3>
+                                    <p>
+                                        AbC es un sólido grupo financiero, de elevada solvencia y gran dimensión con un objetivo común: 
+                                        unir todas las fortalezas para establecer relaciones duraderas con clientes cada día más satisfechos. 
+                                        Mantenemos una relación a largo plazo de confianza y valor mutuo con nuestros clientes. 
+                                        Ofrecemos un servicio de máxima calidad y las soluciones, el asesoramiento y los productos más adecuados a sus necesidades. 
+                                        Toda nuestra organización trabaja para el cliente. 
+                                        Por lo tanto, todas las entidades del Grupo y todas las áreas 
+                                        que las constituyen asumimos el compromiso de desarrollar criterios de responsabilidad social en nuestro trabajo. 
+                                    </p>
+                                </div>
+                                <div id="main-image" class="span5">
+                                    <h:graphicImage id="img-inicio" url="/img/bancoabc.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="foot">
+                            <div class="row">
+                                <div class="span4">
+                                </div>
+                                <div class="span4">
+                                    <div id="integrantes" class="fwidget">
+                                        <h4>Integrantes</h4>
+                                        <ul>
+                                            <li>Antonio Cachuan</li>
+                                            <li>James Centeno</li>
+                                            <li>Redi Cordoba</li>
+                                            <li>Victor Changana</li>
+                                            <li>Jean Pierre Retamozo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Curso de Sistemas Distribuidos | <a href="#home">Banco AbC</a></p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </footer>
+
+        <div class="modal hide" id="loginModal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">✕</button>
+                <h3>Iniciar Sesión</h3>
+            </div>
+            <div class="modal-body" style="text-align:center;">
+                <div class="row-fluid">
+                    <div class="span10 offset1">
+                        <div id="modalTab">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="login">
+                                    <h:form>         
+                                        <h:messages style="color: red; background-color: white;" 
+                                                    showSummary="true"
+                                                    showDetail="true"/>
+                                        <h:panelGrid columns="2">
+                                            <h:outputLabel for="usuario" value="Usuario " />
+                                            <h:inputText id="usuario" value="#{inicioController.usuario}"/>
+                                            
+                                            <h:outputLabel for="clave" value="Contraseña "/>
+                                            <h:inputSecret id="clave" value="#{inicioController.clave}"/>
+                                        </h:panelGrid>
+                                        <h:commandButton class="btn btn-primary" value="Procesar" action="#{inicioController.procesar()}"/>
+                                    </h:form>
+                                </div>
+                                <div class="tab-pane fade" id="forgotpassword">
+                                    <form method="post" action='' name="forgot_password">
+                                        <p>Escribe el correo con el que te registraste</p>
+                                        <input type="text" class="span12" name="eid" id="email" placeholder="Email"/>
+                                        <p><button type="submit" class="btn btn-primary">Enviar</button>
+                                            <a href="#login" data-toggle="tab">Retornar >></a>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h:outputScript name="js/jquery.js"/>
+        <h:outputScript name="js/bootstrap.js"/>
+        <h:outputScript name="js/jquery.isotope.js"/>
+        <h:outputScript name="js/jquery.prettyPhoto.js"/>
+        <h:outputScript name="js/modernizr.custom.28468.js"/>
+        <h:outputScript name="js/jquery.cslider.js"/>
+        <h:outputScript name="js/custom.js"/>
+    </h:body>
+</html>

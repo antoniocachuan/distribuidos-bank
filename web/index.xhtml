@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <h:head>
+		<title>Facelet Title</title>
+		<link rel="stylesheet" type="text/css"
+					href="#{request.contextPath}/css/estilos.css" /> 
+		<style type="text/css">
+			#divLogueo{
+				width: 300px;
+				height: 320px;
+				margin: 20px auto;
+				border-style: solid;
+				border-width: 2px;
+				border-color: blue;
+				background-color: white;
+				padding: 10px;
+			}
+		</style>
+  </h:head>
+  <h:body>
+		<div id="divLogueo">
+			<h:form>
+				<h:graphicImage url="/img/logo.png"/>
+				<h2>Ingreso al Sistema</h2>
+				<h:messages style="color: red; background-color: white;" 
+										showSummary="true"
+										showDetail="true"/>
+				<h:panelGrid columns="1">
+					<h:outputLabel value="Usuario"/>
+					<h:inputText value="#{inicioController.usuario}"/>
+					<h:outputLabel value="Clave"/>
+					<h:inputSecret value="#{inicioController.clave}"/>
+				</h:panelGrid>
+				<h:commandButton value="Procesar" action="#{inicioController.procesar()}"/>
+			</h:form>
+		</div>
+  </h:body>
+</html>
+

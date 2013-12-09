@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+			xmlns:p="http://primefaces.prime.com.tr/ui"
+			xmlns:h="http://java.sun.com/jsf/html"
+			xmlns:f="http://java.sun.com/jsf/core">
+
+	<body>
+
+		<ui:composition template="./plantilla/plantilla.xhtml">
+
+			<ui:define name="content">
+				<h:form>
+					<h1>CONSULTAR MOVIMIENTOS</h1>
+					<div>
+						<h:panelGrid columns="2">
+
+							<h:panelGrid columns="3">
+								<h:outputLabel value="Cuenta"/>
+								<p:inputText id="cuenta" value="#{consultasController.cuenta}"/>
+								<p:commandButton value="Consultar" 
+																 process="@form"
+																 update="tbl"
+																 action="#{consultasController.consultarMovimientos()}"
+																 ajax="true"/>
+							</h:panelGrid>
+
+							<h:panelGrid columns="4" title="Exportar">    
+								<h:commandLink>  
+									<p:graphicImage value="/img/excel.png" />  
+									<p:dataExporter type="xls" target="tbl" fileName="cars" />  
+								</h:commandLink>  
+
+								<h:commandLink>  
+									<p:graphicImage value="/img/pdf.png" />  
+									<p:dataExporter type="pdf" target="tbl" fileName="cars"/>  
+								</h:commandLink>  
+
+								<h:commandLink>  
+									<p:graphicImage value="/img/csv.png" />  
+									<p:dataExporter type="csv" target="tbl" fileName="cars" />  
+								</h:commandLink>  
+
+								<h:commandLink>  
+									<p:graphicImage value="/img/xml.png" />  
+									<p:dataExporter type="xml" target="tbl" fileName="cars" />  
+								</h:commandLink>  
+							</h:panelGrid>
+
+						</h:panelGrid>
+
+					</div>
+					<div>
+						<p:dataTable id="tbl" 
+												 var="r" 
+												 value="#{consultasController.lista}">  
+
+							<p:column>  
+								<f:facet name="header">  
+									<h:outputText value="ID" />  
+								</f:facet> 
+								<h:outputText value="#{r.id}" />  
+							</p:column>  
+
+							<p:column> 
+								<f:facet name="header">  
+									<h:outputText value="FECHA" />  
+								</f:facet> 
+								<h:outputText value="#{r.fecha}" />  
+							</p:column>  
+
+							<p:column>  
+								<f:facet name="header">  
+									<h:outputText value="TIPO" />  
+								</f:facet> 
+								<h:outputText value="#{r.tipo}" />  
+							</p:column>  
+
+							<p:column>  
+								<f:facet name="header">  
+									<h:outputText value="IMPORTE" />  
+								</f:facet> 
+								<h:outputText value="#{r.importe}" />  
+							</p:column>  
+						</p:dataTable>  
+					</div>
+				</h:form>
+			</ui:define>
+
+		</ui:composition>
+
+	</body>
+</html>

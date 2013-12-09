@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+       
+    <h:body>
+        <p:dialog id="modalDialog" header="Aperturar Cuenta" widgetVar="dlg1" modal="true" height="400" width="400">  
+            <h:outputText value="Ingrese los datos siguientes" />  
+        </p:dialog>
+
+        <p:dialog id="modalDialog2" header="Realizar Depósito" widgetVar="dlg2" modal="true" height="400" width="400">  
+            <h:outputText value="Complete el formulario" />
+            <h:form>         
+                <h:messages style="color: red; background-color: white;" 
+                            showSummary="true"
+                            showDetail="true"/>
+                <h:panelGrid columns="2" >
+                    <h:outputLabel for="cuenta" value="Número de Cuenta " />
+                    <h:inputText id="cuenta" value="#{procesosController.cuenta}"/>
+
+                    <h:outputLabel for="importe" value="Importe "/>
+                    <h:inputText id="importe" value="#{procesosController.importe}"/>
+                </h:panelGrid>
+                <h:commandButton class="btn btn-primary" value="Abonar" action="#{procesosController.depositar()}"/>
+            </h:form>
+        </p:dialog>
+
+        <p:dialog id="modalDialog3" header="Consultar Movimientos" widgetVar="dlg3" modal="true" height="650" width="650">  
+            <h:form>
+                <div>
+                    <h:outputLabel value="Cuenta"/>
+                    <p:inputText id="cuenta" value="#{consultasController.cuenta}"/>
+                    <p:commandButton value="Consultar" 
+                                     action="#{consultasController.consultarMovimientos()}"
+                                     ajax="true"/>
+                </div>
+                <div>
+                    <p:dataTable var="r" value="#{consultasController.lista}">  
+                        <p:column headerText="Fecha">  
+                            <h:outputText value="#{r.fecha}" />  
+                        </p:column>  
+
+                        <p:column headerText="Descripcion">  
+                            <h:outputText value="#{r.descripcion}" />  
+                        </p:column>  
+
+                        <p:column headerText="Importe">  
+                            <h:outputText value="#{r.importe}" />  
+                        </p:column>  
+                    </p:dataTable>  
+                </div>
+            </h:form>
+        </p:dialog>
+    </h:body>
+</html>
