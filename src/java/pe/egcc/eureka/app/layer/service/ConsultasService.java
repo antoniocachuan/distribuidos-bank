@@ -6,10 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.egcc.eureka.app.layer.dao.espec.CuentaDao;
 
-/**
- *
- * @author Gustavo Coronel
- */
 @Service
 public class ConsultasService {
 
